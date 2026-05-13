@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+<meta charset="UTF-8">
+<title>AI職涯專家系統</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>AI職涯專家系統</h1>
+
+<label>喜歡數學？</label>
+<select id="math">
+<option value="yes">是</option>
+<option value="no">否</option>
+</select>
+
+<br><br>
+
+<label>喜歡程式設計？</label>
+<select id="coding">
+<option value="yes">是</option>
+<option value="no">否</option>
+</select>
+
+<br><br>
+
+<label>喜歡與人互動？</label>
+<select id="social">
+<option value="yes">是</option>
+<option value="no">否</option>
+</select>
+
+<br><br>
+
+<button onclick="recommend()">開始分析</button>
+
+<div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
