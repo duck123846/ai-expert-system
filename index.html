@@ -4,7 +4,39 @@
 <head>
 <meta charset="UTF-8">
 <title>AI職涯專家系統</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+  font-family: Arial;
+  background:#f4f4f4;
+}
+
+.container{
+  width:400px;
+  margin:auto;
+  margin-top:50px;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+}
+
+button{
+  margin-top:20px;
+  padding:10px;
+  background:#007bff;
+  color:white;
+  border:none;
+}
+
+#result{
+  margin-top:20px;
+  font-size:22px;
+  color:green;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -43,7 +75,34 @@
 
 </div>
 
-<script src="script.js"></script>
+<script>
+
+function recommend(){
+
+let math = document.getElementById("math").value;
+let coding = document.getElementById("coding").value;
+let social = document.getElementById("social").value;
+
+let result = "";
+
+if(math=="yes" && coding=="yes"){
+    result="推薦職業：AI工程師";
+}
+else if(coding=="yes"){
+    result="推薦職業：軟體工程師";
+}
+else if(social=="yes"){
+    result="推薦職業：行銷管理";
+}
+else{
+    result="推薦職業：行政工作";
+}
+
+document.getElementById("result").innerHTML=result;
+
+}
+
+</script>
 
 </body>
 </html>
