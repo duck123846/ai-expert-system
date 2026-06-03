@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>知識工程師 - 多模態 AI 專家系統小產品</title>
+    <title>智慧型多模態 AI 專家系統</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         .tab-content { display: none; }
@@ -16,12 +16,12 @@
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
                 <h1 class="text-2xl font-bold text-cyan-400">🧠 多層式 AI 專家系統</h1>
-                <p class="text-sm text-gray-400 mt-1">系統架構：前端介面層 ⇄ 後端控制層 ⇄ 推理引擎與知識庫</p>
+                <p class="text-sm text-gray-400 mt-1">系統架構：前端呈現層 ⇄ 後端控制層 ⇄ 推理引擎與知識庫</p>
             </div>
             <nav class="flex gap-2 bg-slate-800 p-1.5 rounded-lg">
-                <button onclick="switchTab('nlp-tab')" id="btn-nlp-tab" class="tab-btn px-4 py-2 rounded-md text-sm font-medium bg-cyan-600 text-white shadow">💬 NLP 專家系統</button>
-                <button onclick="switchTab('cv-tab')" id="btn-cv-tab" class="tab-btn px-4 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-slate-700">🔮 風險評估 (第1題)</button>
-                <button onclick="switchTab('theory-tab')" id="btn-theory-tab" class="tab-btn px-4 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-slate-700">📊 訪談理論 (第3題)</button>
+                <button onclick="switchTab('nlp-tab')" id="btn-nlp-tab" class="tab-btn px-4 py-2 rounded-md text-sm font-medium bg-cyan-600 text-white shadow">💬 語意諮詢模組</button>
+                <button onclick="switchTab('cv-tab')" id="btn-cv-tab" class="tab-btn px-4 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-slate-700">🔮 全球風險評估</button>
+                <button onclick="switchTab('theory-tab')" id="btn-theory-tab" class="tab-btn px-4 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-slate-700">📊 知識擷取方法論</button>
             </nav>
         </div>
     </header>
@@ -33,31 +33,31 @@
                 <h2 class="text-xl font-bold mb-2 flex items-center gap-2 text-slate-800">
                     <span>💬</span> 自然語言處理 (NLP) 對話介面
                 </h2>
-                <p class="text-sm text-gray-500 mb-4">本介面接收輸入後，會將資料傳遞至後端 <strong>inference_engine.js</strong> 進行 IF-THEN 推理。</p>
+                <p class="text-sm text-gray-500 mb-4">本介面接收輸入後，會將資料傳遞至後端 <strong>inference_engine.js</strong> 進行內部規則推理。</p>
                 
                 <div class="border border-gray-200 rounded-lg bg-gray-50 p-4 h-64 overflow-y-auto mb-4 space-y-3" id="chat-box">
                     <div class="flex gap-2">
                         <span class="bg-cyan-100 text-cyan-800 text-xs font-bold px-2 py-1 rounded h-fit">AI</span>
                         <div class="bg-white p-3 rounded-lg shadow-xs text-sm max-w-[80%]">
-                            您好！我是通過系統架構驗證的 AI 專家系統。您可以問我關於「功能」、「樹狀圖結構」或「Puff系統」。
+                            您好！我是通過系統架構驗證的 AI 專家系統。您可以問我關於「功能」、「技術樹狀圖」或「Puff系統歷史」。
                         </div>
                     </div>
                 </div>
 
                 <div class="flex gap-2">
-                    <input type="text" id="user-input" placeholder="請輸入問題... (例如: 幫我解釋樹狀圖)" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                    <input type="text" id="user-input" placeholder="請輸入問題... (例如: 幫我解釋技術樹狀圖)" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500">
                     <button onclick="handleSendClick()" class="bg-cyan-600 hover:bg-cyan-700 text-white px-5 py-2 rounded-lg font-medium text-sm transition">發送</button>
                 </div>
             </div>
 
             <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl">
-                <h3 class="text-amber-800 font-bold text-sm">⚠️ 專家系統提醒：Chatbot 協助專家決策的 5 大限制 (第二題)</h3>
+                <h3 class="text-amber-800 font-bold text-sm">⚠️ 專家系統核心提醒：大型語言模型協助決策的 5 大系統限制</h3>
                 <ul class="text-xs text-amber-700 mt-2 list-disc list-inside space-y-1">
-                    <li><strong>知識不一定正確</strong>：如醫療系統可能誤判抗生素療效。</li>
-                    <li><strong>缺乏因果推理</strong>：法律系統可能只比對語句相似度而非邏輯推理。</li>
-                    <li><strong>來源不透明</strong>：金融系統判定高風險卻無法提供權重解釋。</li>
-                    <li><strong>專業知識過時</strong>：稅務系統可能未更新最新法規。</li>
-                    <li><strong>資安隱私風險</strong>：若將敏感個資上傳外網會導致洩漏。</li>
+                    <li><strong>知識不一定正確</strong>：如醫療諮詢系統可能誤判抗生素對病毒性感冒的療效 [cite: 47]。</li>
+                    <li><strong>缺乏因果推理</strong>：法律輔助系統可能僅比對語句相似度，而非進行實質條文邏輯推理 [cite: 49]。</li>
+                    <li><strong>來源不透明</strong>：金融風險評估系統判定高風險時，無法提供內部特徵權重解釋 [cite: 51]。</li>
+                    <li><strong>專業知識過時</strong>：稅務導引系統可能尚未同步更新政府最新修改的法規與稅率 [cite: 53]。</li>
+                    <li><strong>資安隱私風險</strong>：若將敏感病歷或身分證號直接傳遞給外部雲端模型，存在個資外洩風險 [cite: 55]。</li>
                 </ul>
             </div>
         </div>
@@ -65,17 +65,17 @@
         <div id="cv-tab" class="tab-content space-y-6">
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
                 <h2 class="text-xl font-bold mb-2 flex items-center gap-2 text-slate-800">
-                    <span>🔮</span> 風險決策引擎 (呼應第一題)
+                    <span>🔮</span> 風險決策引擎
                 </h2>
-                <p class="text-sm text-gray-500 mb-6">點擊事件按鈕，前端控制器會調用後端知識庫的結構化規則：</p>
+                <p class="text-sm text-gray-500 mb-6">點擊事件按鈕，前端控制器會調用後端知識庫的結構化推導規則：</p>
 
                 <div class="flex flex-wrap gap-2 mb-6">
-                    <button onclick="handleRiskClick('deepseek')" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition">DeepSeek 爆紅</button>
-                    <button onclick="handleRiskClick('covid')" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition">COVID-19 疫情</button>
-                    <button onclick="checkTrumpBonus()" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition">川普關稅政策</button>
-                    <button onclick="handleRiskClick('911')" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition">911 事件</button>
-                    <button onclick="handleRiskClick('climate')" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition">氣候變遷</button>
-                    <button onclick="handleRiskClick('finance')" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition">2008金融海嘯</button>
+                    <button onclick="handleRiskClick('deepseek')" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition">DeepSeek 爆紅事件</button>
+                    <button onclick="handleRiskClick('covid')" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition">COVID-19 疫情大流行</button>
+                    <button onclick="checkTrumpBonus()" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition">全球關稅政策</button>
+                    <button onclick="handleRiskClick('911')" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition">911 突發事件</button>
+                    <button onclick="handleRiskClick('climate')" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition">全球氣候變遷</button>
+                    <button onclick="handleRiskClick('finance')" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition">2008 金融海嘯</button>
                 </div>
 
                 <div id="risk-result" class="hidden p-5 rounded-xl border">
@@ -91,31 +91,31 @@
         <div id="theory-tab" class="tab-content space-y-6">
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 overflow-x-auto">
                 <h2 class="text-xl font-bold mb-2 flex items-center gap-2 text-slate-800">
-                    <span>📊</span> 第三題成果：結構化訪談 vs 案例研討
+                    <span>📊</span> 知識擷取方法論：結構化訪談 vs 案例研討
                 </h2>
                 <table class="min-w-full divide-y divide-gray-200 text-sm text-left">
                     <thead class="bg-slate-100 text-slate-700 font-bold">
                         <tr>
                             <th class="px-4 py-3 border">比較項目</th>
-                            <th class="px-4 py-3 border">結構化訪談 (Structured Interview)</th>
-                            <th class="px-4 py-3 border">案例研討 (Case Discussion)</th>
+                            <th class="px-4 py-3 border">結構化訪談 (Structured Interview) [cite: 63]</th>
+                            <th class="px-4 py-3 border">案例研討 (Case Discussion) [cite: 63]</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-200 text-gray-600">
                         <tr>
                             <td class="px-4 py-3 font-semibold bg-gray-50 border">主要功能</td>
-                            <td class="px-4 py-3 border">有系統蒐集專家知識與規則</td>
-                            <td class="px-4 py-3 border">分析專家如何思考與決策</td>
+                            <td class="px-4 py-3 border">有系統蒐集專家知識與規則 [cite: 63]</td>
+                            <td class="px-4 py-3 border">分析專家如何思考與決策 [cite: 63]</td>
                         </tr>
                         <tr>
                             <td class="px-4 py-3 font-semibold bg-gray-50 border">知識類型</td>
-                            <td class="px-4 py-3 border">顯性知識 (Explicit Knowledge)</td>
-                            <td class="px-4 py-3 border">隱性知識 (Tacit Knowledge)</td>
+                            <td class="px-4 py-3 border">顯性知識 (Explicit Knowledge) [cite: 63]</td>
+                            <td class="px-4 py-3 border">隱性知識 (Tacit Knowledge) [cite: 63]</td>
                         </tr>
                         <tr>
                             <td class="px-4 py-3 font-semibold bg-gray-50 border">適合應用</td>
-                            <td class="px-4 py-3 border">建立規則型專家系統</td>
-                            <td class="px-4 py-3 border">建立複雜推理或經驗型系統</td>
+                            <td class="px-4 py-3 border">建立規則型專家系統 [cite: 63]</td>
+                            <td class="px-4 py-3 border">建立複雜推理或經驗型系統 [cite: 63]</td>
                         </tr>
                     </tbody>
                 </table>
