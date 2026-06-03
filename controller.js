@@ -57,7 +57,6 @@ function handleRiskClick(eventKey) {
     desc.className = `text-sm ${data.type === '黑天鵝' ? 'text-red-800' : 'text-amber-800'} opacity-90 mt-2`;
 }
 
-// 已完全移除「第1-(4)題」等字樣
 function checkTrumpBonus() {
     const panel = document.getElementById('risk-result');
     const badge = document.getElementById('risk-badge');
@@ -69,7 +68,7 @@ function checkTrumpBonus() {
     badge.innerText = "灰犀牛";
     title.innerText = "全球關稅政策評估";
     title.className = "font-bold text-lg text-amber-800";
-    desc.innerText = "【保護主義與貿易政策層面】關稅屏障政策通常具備高度公開性，在前期推動與競選期間皆有明確、公開的施政方針與言論主張 [cite: 18, 19, 20]。此類政策帶來的經濟風險在市場上早已明確存在，雖經常被部分投資群體短期忽视，但在知識工程的風險模型中，屬於極具代表性的『灰犀牛』事件。";
+    desc.innerText = "【保護主義與貿易政策層面】關稅屏障政策通常具備高度公開性，在前期推動與競選期間皆有明確、公開的施政方針與言論主張。此類政策帶來的經濟風險在市場上早已明確存在，雖經常被部分投資群體短期忽視，但在知識工程的風險模型中，屬於極具代表性的『灰犀牛』事件。";
 }
 
 document.getElementById("user-input").addEventListener("keypress", function(event) {
