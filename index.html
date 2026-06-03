@@ -12,6 +12,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
+    <!-- 頁首導覽 -->
     <header class="bg-slate-900 text-white shadow-md p-6">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
@@ -28,6 +29,7 @@
 
     <main class="max-w-6xl mx-auto p-6 my-6">
 
+        <!-- 頁籤一：NLP Chatbot 專家系統 -->
         <div id="nlp-tab" class="tab-content active space-y-6">
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
                 <h2 class="text-xl font-bold mb-2 flex items-center gap-2 text-slate-800">
@@ -50,18 +52,20 @@
                 </div>
             </div>
 
+            <!-- 限制警示區 -->
             <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl">
                 <h3 class="text-amber-800 font-bold text-sm">⚠️ 專家系統核心提醒：大型語言模型協助決策的 5 大系統限制</h3>
                 <ul class="text-xs text-amber-700 mt-2 list-disc list-inside space-y-1">
-                    <li><strong>知識不一定正確</strong>：如醫療諮詢系統可能誤判抗生素對病毒性感冒的療效 [cite: 47]。</li>
-                    <li><strong>缺乏因果推理</strong>：法律輔助系統可能僅比對語句相似度，而非進行實質條文邏輯推理 [cite: 49]。</li>
-                    <li><strong>來源不透明</strong>：金融風險評估系統判定高風險時，無法提供內部特徵權重解釋 [cite: 51]。</li>
-                    <li><strong>專業知識過時</strong>：稅務導引系統可能尚未同步更新政府最新修改的法規與稅率 [cite: 53]。</li>
-                    <li><strong>資安隱私風險</strong>：若將敏感病歷或身分證號直接傳遞給外部雲端模型，存在個資外洩風險 [cite: 55]。</li>
+                    <li><strong>知識不一定正確</strong>：如醫療諮詢系統可能誤判抗生素對病毒性感冒的療效。</li>
+                    <li><strong>缺乏因果推理</strong>：法律輔助系統可能僅比對語句相似度，而非進行實質條文邏輯推理。</li>
+                    <li><strong>來源不透明</strong>：金融風險評估系統判定高風險時，無法提供內部特徵權重解釋。</li>
+                    <li><strong>專業知識過時</strong>：稅務導引系統可能尚未同步更新政府最新修改的法規與稅率。</li>
+                    <li><strong>資安隱私風險</strong>：若將敏感病歷或身分證號直接傳遞給外部雲端模型，存在個資外洩風險。</li>
                 </ul>
             </div>
         </div>
 
+        <!-- 頁籤二：全球風險評估 -->
         <div id="cv-tab" class="tab-content space-y-6">
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
                 <h2 class="text-xl font-bold mb-2 flex items-center gap-2 text-slate-800">
@@ -88,6 +92,7 @@
             </div>
         </div>
 
+        <!-- 頁籤三：知識擷取方法論對比表 -->
         <div id="theory-tab" class="tab-content space-y-6">
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 overflow-x-auto">
                 <h2 class="text-xl font-bold mb-2 flex items-center gap-2 text-slate-800">
@@ -97,25 +102,25 @@
                     <thead class="bg-slate-100 text-slate-700 font-bold">
                         <tr>
                             <th class="px-4 py-3 border">比較項目</th>
-                            <th class="px-4 py-3 border">結構化訪談 (Structured Interview) [cite: 63]</th>
-                            <th class="px-4 py-3 border">案例研討 (Case Discussion) [cite: 63]</th>
+                            <th class="px-4 py-3 border">結構化訪談 (Structured Interview)</th>
+                            <th class="px-4 py-3 border">案例研討 (Case Discussion)</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-200 text-gray-600">
                         <tr>
                             <td class="px-4 py-3 font-semibold bg-gray-50 border">主要功能</td>
-                            <td class="px-4 py-3 border">有系統蒐集專家知識與規則 [cite: 63]</td>
-                            <td class="px-4 py-3 border">分析專家如何思考與決策 [cite: 63]</td>
+                            <td class="px-4 py-3 border">有系統蒐集專家知識與規則</td>
+                            <td class="px-4 py-3 border">分析專家如何思考與決策</td>
                         </tr>
                         <tr>
                             <td class="px-4 py-3 font-semibold bg-gray-50 border">知識類型</td>
-                            <td class="px-4 py-3 border">顯性知識 (Explicit Knowledge) [cite: 63]</td>
-                            <td class="px-4 py-3 border">隱性知識 (Tacit Knowledge) [cite: 63]</td>
+                            <td class="px-4 py-3 border">顯性知識 (Explicit Knowledge)</td>
+                            <td class="px-4 py-3 border">隱性知識 (Tacit Knowledge)</td>
                         </tr>
                         <tr>
                             <td class="px-4 py-3 font-semibold bg-gray-50 border">適合應用</td>
-                            <td class="px-4 py-3 border">建立規則型專家系統 [cite: 63]</td>
-                            <td class="px-4 py-3 border">建立複雜推理或經驗型系統 [cite: 63]</td>
+                            <td class="px-4 py-3 border">建立規則型專家系統</td>
+                            <td class="px-4 py-3 border">建立複雜推理或經驗型系統</td>
                         </tr>
                     </tbody>
                 </table>
